@@ -1,0 +1,12 @@
+1、post请求，使用app.use(bodyParser.urlencoded({ extended: false }))来处理post请求。
+通过访问接口呈递页面进行请求
+2、get请求，使用req.query.*获得参数
+3、post请求,使用自己封装的方法来处理。
+4、post请求，使用IncomingForm来处理post请求  
+5、post请求，含数据和图片的提交
+6、post请求，含数据和图片的提交，修改名字和后缀名
+
+请注意请求地址！！！
+form1.html可以用4.js接收请求
+form2.html可以用5.js接收请求
+form2.html可以用6.js接收请求，实现文件名字和后缀名的修改
