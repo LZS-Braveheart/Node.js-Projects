@@ -1,0 +1,26 @@
+{
+  "name": "microblog",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "connect-mongo": "0.1.7",
+    "ejs": "0.0.1",
+    "express": "^2.5.8",
+    "mongodb": "0.9.9"
+  },
+  "description": "A tiny mircoblog system using Node.js for learning purposes.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BYVoid/microblog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BYVoid/microblog/issues"
+  },
+  "homepage": "https://github.com/BYVoid/microblog#readme"
+}
