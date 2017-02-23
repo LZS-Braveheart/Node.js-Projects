@@ -6,7 +6,7 @@ var MongoClient = require('mongodb').MongoClient;
 
 var app = express();
 
-app.set("view engine","ejs");
+app.set("view engine","ejs");   
 
 //数据库连接的地址，最后的斜杠表示数据库名字
 var shujukuURL = 'mongodb://localhost:27017/DB/shanguagua';
@@ -15,7 +15,7 @@ app.get("/",function(req,res){
     //先连接数据库，对数据库的所有操作，都要写在他的回调函数里面。
     MongoClient.connect(shujukuURL, function(err, db) {
         if(err){
-            //res.write("数据库连接失败");
+            res.write("数据库连接失败");
             return;
         }
         //res.write("恭喜，数据库已经成功连接 \n");
