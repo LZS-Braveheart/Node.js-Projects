@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		table,tr,td{
+			border: 1px solid red
+		}
+	</style>
+</head>
+<body>
+	<a href="/add" target="_blank">添加学生</a>
+	<table>
+		<tr>
+			<td>名字</td>
+			<td>年龄</td>
+			<td>性别</td>
+			<td>所选课程</td>
+			<td>操作</td>
+		</tr>
+		<% for(var i=0;i < students.length;i++){%>
+		<tr>
+			<td><%=students[i].name%></td>
+			<td><%=students[i].age%></td>   
+			<td><%=students[i].sex%></td>
+			<td><%=students[i].courses%></td>
+			<td>
+				<a href="/edit/<%=students[i].sid%>">操作</a>
+				<a href="/remove/<%=students[i].sid%>">删除</a>
+			</td>
+		</tr>
+		<%}%>
+	</table>
+</body>
+</html>

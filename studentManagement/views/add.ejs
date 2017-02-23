@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form action="/doAdd" method="get">
+		<p>
+			学号：<input type="text" name="sid">
+		</p>
+		<p>
+			姓名：<input type="text" name="name">
+		</p>
+		<p>
+			年龄：<input type="text" name="age">
+		</p>
+		<p>
+			性别：
+			<input type="radio" name="sex" value="男">男
+			<input type="radio" name="sex" value="女">女
+		</p>   
+		<p>
+			选修课程：
+			<%for(var i=0;i< Allcourse.length;i++){%>  
+				<input type="checkbox" name="courses" value="<%=Allcourse[i].kid%>"><%=Allcourse[i].name%>
+			<%}%>
+		</p>
+		<p><input type="submit"></p>
+	</form>
+</body>
+</html>
