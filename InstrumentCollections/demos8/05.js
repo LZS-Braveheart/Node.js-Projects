@@ -34,7 +34,7 @@ kechengSchema.methods.tianjiaxuesheng = function(studentObj,callback){
     this.student.push(studentObj);
     this.save(function(){
         callback();
-    });
+    });  
 }
 
 kechengSchema.methods.zhaoxuesheng = function(num,callback){
@@ -42,6 +42,7 @@ kechengSchema.methods.zhaoxuesheng = function(num,callback){
     Student.findOne({"name":this.student[num].name},function(err,result){
         callback(err,result);
     });
+
 }
 
 var Kecheng = mongoose.model("Kecheng",kechengSchema);
