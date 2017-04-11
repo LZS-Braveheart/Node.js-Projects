@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h1>Editing Student Information</h1>
+    <form action="/doedit/<%=student.Id%>" method="get">
+        <p>
+            Id
+            <input type="text" name="Id" disabled value="<%=student.Id%>"/>
+        </p>
+        <p>
+            Name
+            <input type="text" name="Name" value="<%=student.Name%>"/>
+        </p>
+        <p>
+            Nickname
+            <input type="text" name="Nickname" value="<%=student.Nickname%>"/>
+        </p>
+        <p>
+            Age
+            <input type="text" name="Age" value="<%=student.Age%>"/>
+        </p>
+        <p>
+            Sex
+            <input type="radio" name="Sex" value="boy" <%if(student.Sex=="boy"){%>checked<%}%> />Boy
+            <input type="radio" name="Sex" value="girl" <%if(student.Sex=="girl"){%>checked<%}%> />Girl
+        </p>
+        <p>
+            <input type="submit"/>
+        </p>
+    </form>
+</body>
+</html>
