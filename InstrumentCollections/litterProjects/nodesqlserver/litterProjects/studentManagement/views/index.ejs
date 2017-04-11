@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        table,tr,td{
+            border: 1px solid black;
+        }       
+        td{
+            width: 200px;
+            line-height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <a href="/add" target="_blank">Add Student...</a>
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Nickname</td>
+            <td>Age</td>
+            <td>Sex</td>
+            <td>Operate...</td>
+        </tr>
+
+        <% for(var i = 0 ; i < students.length ; i++){%>
+            <tr>
+                <td><%=students[i].dataValues.Id%></td>
+                <td><%=students[i].dataValues.Name%></td>
+                <td><%=students[i].dataValues.Nickname%></td>
+                <td><%=students[i].dataValues.Age%></td>
+                <td><%=students[i].dataValues.Sex%></td>
+                <td>
+                    <a href="/edit/<%=students[i].dataValues.Id%>">修改</a>
+                    <a href="/remove/<%=students[i].dataValues.Id%>">删除</a>
+                </td>
+            </tr>
+        <%}%>
+
+    </table>
+</body>
+</html>
